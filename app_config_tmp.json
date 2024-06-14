@@ -1,0 +1,300 @@
+var config_data = {
+    "pages": [{
+        "title": "home",
+        "id": "0",
+        "hidefooter": "1",
+        "items": []
+    }, {
+        "title": "contact_us",
+        "id": "1",
+        "items": [{
+            "id": 9,
+            "display_type": "text"
+        }, {
+            "id": 12,
+            "display_type": "list",
+            "bullet_style": "check"
+        }, {
+            "id": 14,
+            "display_type": "image",
+            "caption_style": "right"
+        }, {
+            "id": 11,
+            "display_type": "list"
+        }, {
+            "id": 7,
+            "display_type": "menu"
+        }]
+    }, {
+        "title": "about",
+        "id": "2",
+        "items": [{
+            "id": 10,
+            "display_type": "text"
+        }]
+    }, {
+        "title": "client_satisfaction_survey",
+        "id": "3"
+    }, {
+        "title": "employment",
+        "id": "4",
+        "items": []
+    }, {
+        "title": "map",
+        "id": "5",
+        "items": []
+    }, {
+        "title": "services",
+        "id": "6",
+        "items": []
+    }, {
+        "title": "social",
+        "id": "7",
+        "items": []
+    }, {
+        "title": "support_ticket",
+        "id": "8",
+        "items": []
+    }, {
+        "title": "template",
+        "id": "9",
+        "items": []
+    }, {
+        "title": "testimonials",
+        "id": "10",
+        "items": []
+    }, {
+        "title": "user_guides",
+        "id": "11",
+        "items": [{
+            "id": 13,
+            "display_type": "menu"
+        }]
+    }],
+    "items": [{
+        "name": "services",
+        "id": "6",
+        "details": []
+    }, {
+        "name": "userguides",
+        "id": "1",
+        "details": []
+    }, {
+        "name": "testimonials",
+        "id": "2",
+        "details": []
+    }, {
+        "name": "news",
+        "id": "3",
+        "details": []
+    }, {
+        "name": "contactus",
+        "id": "4",
+        "details": []
+    }, {
+        "name": "homemenu",
+        "id": "5",
+        "details": [{
+            "title": "About Us",
+            "id": 0,
+            "pagelink": 2
+        }, {
+            "title": "Services",
+            "id": 1,
+            "pagelink": 6
+        }, {
+            "title": "User Guides",
+            "id": 2,
+            "pagelink": 11
+        }, {
+            "title": "Testimonials",
+            "id": 3,
+            "pagelink": 10
+        }, {
+            "title": "Contact Us",
+            "id": 4,
+            "pagelink": 1
+        }, {
+            "title": "Find Our Office",
+            "id": 5,
+            "pagelink": 5
+        }]
+    }, {
+        "name": "Good 'ol Fashioned Menu",
+        "details": [{
+            "id": 0,
+            "title": "About",
+            "text": "Hello",
+            "pagelink": "2"
+        }, {
+            "title": "Services",
+            "id": 1,
+            "text": "(new) Menu",
+            "pagelink": "6"
+        }, {
+            "title": "Home",
+            "id": 2,
+            "pagelink": "12"
+        }],
+        "id": 7,
+        "display_type": "menu"
+    }, {
+        "name": "(new) Menu",
+        "details": [{
+            "id": 0,
+            "title": "(new) Menu",
+            "text": "(new) Menu"
+        }],
+        "id": 8
+    }, {
+        "name": "Just Text",
+        "details": [{
+            "id": 0,
+            "title": "Just a heading",
+            "text": "This is just a paragraph."
+        }],
+        "id": 9,
+        "display_type": "text"
+    }, {
+        "id": 10,
+        "details": [{
+            "id": 0,
+            "title": "detail 1",
+            "text": "detail 1"
+        }],
+        "name": "About Us:",
+        "display_type": "text"
+    }, {
+        "id": 11,
+        "details": [{
+            "id": 0,
+            "title": "First contact",
+            "text": "Clay Ackerland"
+        }, {
+            "id": 0,
+            "title": "Second contact",
+            "text": "Chris Wiggerman"
+        }, {
+            "id": 0,
+            "title": "Third contact",
+            "text": "Jenn Wiggerman"
+        }, {
+            "id": 0,
+            "title": "Fourth contact",
+            "text": "James Richartz"
+        }, {
+            "id": 0,
+            "title": "First contact",
+            "text": "Erik Madison"
+        }],
+        "name": "Contacts",
+        "display_type": "list"
+    }, {
+        "id": 12,
+        "details": [{
+            "title": "Detail 0",
+            "id": 0,
+            "text": "Fact 1"
+        }, {
+            "title": "Detail 1",
+            "id": 1,
+            "text": "Fact 2"
+        }, {
+            "title": "Detail 2",
+            "id": 2,
+            "text": "Fact 3"
+        }],
+        "name": "Facts",
+        "display_type": "list"
+    }, {
+        "id": 13,
+        "details": [{
+            "id": 0,
+            "title": "detail 1",
+            "text": "detail 1",
+            "pagelink": "-1"
+        }, {
+            "title": "new detail",
+            "id": 1
+        }],
+        "name": "(new) Menu",
+        "display_type": "menu"
+    }, {
+        "id": 14,
+        "details": [{
+            "id": 0,
+            "title": "My Image",
+            "text": "This is a caption",
+            "src": "pic1.jpg"
+        }],
+        "name": "Image",
+        "display_type": "image"
+    }, {
+        "id": 15,
+        "details": [{
+            "id": 0,
+            "title": "detail 1",
+            "text": "detail 1"
+        }],
+        "name": "(new) Map",
+        "display_type": "map"
+    }],
+    "backgrounds": [{
+        "name": "main",
+        "background": "#ffffff",
+        "type": "color"
+    }, {
+        "name": "second",
+        "background": "images/background.jpg",
+        "type": "image"
+    }],
+    "options": {
+        "logo": "logo.png",
+        "companyname": "My Company",
+        "legalname": "My Company inc.",
+        "textcolor": "#f0f0f0",
+        "facebook": "facebook",
+        "linkedin": "http://www.linkedin.com/company/2286438?trk=NUS_CMPY_TWIT",
+        "twitter": "wilsontechgroup",
+        "email": "example@example.com",
+        "address": "24332 Dorsey Smith Rd.",
+        "city": "Brooksville",
+        "state": "FL",
+        "zip": "34601",
+        "phone": "(352) 796-9891",
+        "longitude": "-82.346716",
+        "latitude": "28.529104",
+        "gcmid": "381370117390",
+        "pushgreeting": "AWM - Promoblast!",
+        "base_color": "#15436a",
+        "background_image": "awm_background_overlay.png",
+        "background_color": "#123456",
+        "h1color": "#a0a0a0",
+        "h2color": "#ffffff",
+        "h3color": "#f0f0f0"
+    },
+    "footer-items": [{
+        "id": 0,
+        "text": "Home",
+        "link": {
+            "type": "page",
+            "value": 0
+        },
+        "image": "map"
+    }, {
+        "id": 1,
+        "text": "Social",
+        "link": {
+            "type": "page",
+            "value": 7
+        },
+        "image": "star"
+    }, {
+        "id": 2,
+        "text": "Give Us a Call",
+        "link": {
+            "type": "phone"
+        },
+        "image": "call"
+    }]
+};

@@ -1,0 +1,10 @@
+select
+	wp_mcba_users.*,
+	wp_mcba.mcba_id
+from
+	wp_mcba_users,
+	wp_mcba
+where
+	wp_mcba_users.isAdmin='1'
+and
+	wp_mcba.id='1';

@@ -1,0 +1,43 @@
+.chat-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: #ffffff;
+    border: solid 1px;
+    border-color: black;
+    /* height: var(--chat_area_height); */
+    height: 40%;
+    overflow: auto;
+}
+
+
+
+/* ///////////////// begin main grid areas
+/* Shorthand for 'grid-row-start', 'grid-column-start', 'grid-row-end', and 'grid-column-end'. */
+
+
+/*  end main grid areas */
+
+/* send */
+/* send chat */
+.send_chat_row_container {
+    display: grid;
+    /* grid-template-columns: minmax(25%, 25%) minmax(auto, 70%); */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+    padding: 8px;
+}
+
+.send_chat_id {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.send_chat_image {
+    grid-area: 1 / 2 / 2 / 6;
+    background-image: url("sender_box.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* z-index: -1; */
+    align-self: left
+}

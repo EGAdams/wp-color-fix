@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Caht Cfae</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"></script>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Margarine' rel='stylesheet'>
+    
+</head>
+<body>
+    <div class = "container-fluid">
+        <div class="header clearfix">
+          <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1"><img class = "logo" src = "img/Caht-Logo.png"></span>
+              <p id = "user-name"></p>
+              <a class="btn btn-outline-primary" id = "chat" href = "index.html">Caht</a>
+              <a class="btn btn-outline-primary active" id = "settings" href = "settings.html">Steitngs<span class="sr-only">(current)</span></a>
+              <button class="btn btn-outline-primary" id = "log-out" type = "click">Lgo Otu</button>
+          </nav>
+        </div>
+
+        <div class = "container">
+          <dl class="form-group">
+            <dt><label for="user_profile_name">Display Name</label></dt>
+            <dd>
+              <input class="form-control" type="text" value="" name="user[profile_name]" id="user_profile_name">
+            </dd>
+            <dd><small id = "name-info" class="text-muted">
+              The name will be displayed to the public.
+            </small></dd>
+          </dl>
+
+          <dl class="form-group">
+            <dt><label for="inputPassword">Update Password</label></dt>
+            <div class="row">
+              <div class = "col">
+                <dd><input type="password" id="inputPassword" class="form-control mr-sm-2" placeholder="Current Password"></dd>
+                <small id="passwordCurrent" class="text-muted">Input current password.</small>
+              </div>
+              <div class = "col">
+                <dd><input type="password" id="inputPassword6" class="form-control mr-sm-2" placeholder="New Password"></dd>
+                <small id="passwordHelpInline" class="text-muted">New password must be 8-20 characters long.</small>
+              </div>
+            </div>
+          </dl>
+          
+        <dl class="form-group">
+          <dt><label for="user_profile_bio">Encryption Mode</label></dt>
+          <select class="custom-select mr-sm-2" name="encryption-mode" id="encryption-mode">
+            <option id = "nr"value="nr">Normal</option>
+            <option id = "nn" value="nn">None</option>
+            <option id = "cr" value="cr">Crazy</option>
+          </select>
+          <dd><small id = "encrypt-info" class="text-muted">
+            Chat encrypting options.
+          </small></dd>
+        </dl>
+
+        <p><button id = "save-settings" type="click" class="btn btn-primary">Update Settings</button></p>
+      </div>
+      
+    </div>
+    <script src='./js/fireBase.js'></script>
+    <script src='./js/settings.js'></script>
+</body>
+
+<footer id = "footer" class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+       Chat Cafe (Caht Cfae).
+    </div>
+</footer>
+</html>

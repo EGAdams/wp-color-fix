@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+
+    <title>QuickSand</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScrip
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/EasyBox.js">
+    </script>
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/MessageManager.js">
+    </script>
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/Guest.js"></script>
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/ChatRouter.js">
+    </script>
+    <script
+        src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/BroadcastMessageRouter.js">
+    </script>
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/DataSource.js">
+    </script>
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/Identity.js">
+    </script>
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/Tests.js"></script>
+    
+
+    <link rel="stylesheet"
+        href="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/css/style.css" />
+
+    <script>
+        var broadcastPacketRouter = new BroadcastMessageRouter( "id", "value" );
+        console.log( "constructing new Guest..." );
+        var guest = new Guest();
+        console.log( "constructing new BroadcastChannel..." );
+        const controlChannel = new BroadcastChannel( 'control-data' );
+        const channel = new BroadcastChannel( 'app-data' );
+        console.log( "constructing new ChatRouter... " );
+        var chatRouter = new ChatRouter();
+        const msgRef = {};
+        var messageManager = new MessageManager( msgRef );
+        channel.addEventListener( 'message', ( event ) => {
+            broadcastPacketRouter.route( event.data );
+        } );
+
+        $( document ).ready( function () {
+            console.log( "setting screens..." );
+            guest.setScreen( "guest_screen" );
+            chatRouter.setScreen( "chat_screen" );
+            messageManager.setScreen( "message_manager_screen" );
+            $( "#start_all_tests" ).click( function () {
+                messageManager.log( "starting all tests." );
+                var tests = new Tests( messageManager );
+                tests.deleteConversations();
+                tests.deleteMessages();
+                tests.deleteUsers();
+                var packet = {
+                    packetType: "command",
+                    command: {
+                        name: "startTests",
+                        args: "test arguments"
+                    }
+                }
+                channel.postMessage( packet );
+
+            } );
+
+            $( "#clear_conversation_table" ).click( function () {
+                messageManager.log( "clearing conversation table..." );
+                var tests = new Tests( messageManager );
+                tests.deleteConversations();
+            } );
+
+            $( "#clear_messages_table" ).click( function () {
+                messageManager.log( "clearing messages table..." );
+                var tests = new Tests( messageManager );
+                tests.deleteMessages();
+            } );
+
+            $( "#clear_users_table" ).click( function () {
+                messageManager.log( "clearing users table..." );
+                var tests = new Tests( messageManager );
+                tests.deleteUsers();
+            } );
+
+            $( "#stopmonitor" ).click( function () {
+                var packet = {
+                    packetType: "command",
+                    command: {
+                        name: "stopMonitor",
+                        args: ""
+                    }
+                }
+                // channel.postMessage( packet );
+            } );
+        } );
+    </script>
+
+    <style>
+        .red_white_fail {
+            color: white;
+            background-color: red;
+        }
+
+        .light_green {
+            color: black;
+            background-color: lightgreen;
+        }
+
+        .inside_container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            justify-content: stretch;
+            align-content: stretch;
+            justify-items: stretch;
+            align-items: stretch;
+            width: 75%;
+            height: 75%;
+        }
+
+        .one {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .two {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .three {
+            grid-area: 1 / 3 / 2 / 4;
+        }
+
+        .four {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .five {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+
+        .six {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+
+
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 0px 0px;
+            justify-content: stretch;
+            align-content: stretch;
+            justify-items: stretch;
+            align-items: stretch;
+            width: 75%;
+            height: 75%;
+        }
+
+        .one {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .two {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .three {
+            grid-area: 1 / 3 / 2 / 4;
+        }
+
+        .four {
+            grid-area: 1 / 4 / 2 / 5;
+        }
+
+        .five {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .six {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .seven {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .eight {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+
+        .nine {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+
+        .ten {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+
+        .eleven {
+            grid-area: 3 / 3 / 4 / 4;
+        }
+
+        .twelve {
+            grid-area: 3 / 4 / 4 / 5;
+        }
+
+        .thirteen {
+            grid-area: 4 / 1 / 5 / 2;
+        }
+
+        .fourteen {
+            grid-area: 4 / 2 / 5 / 3;
+        }
+
+        .fifteen {
+            grid-area: 4 / 3 / 5 / 4;
+        }
+
+        .sixteen {
+            grid-area: 4 / 4 / 5 / 5;
+        }
+
+        .container_2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            justify-content: stretch;
+            align-content: stretch;
+            justify-items: stretch;
+            align-items: stretch;
+            width: 100%;
+            height: 75%;
+        }
+
+        .one {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+
+        .two {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .three {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .four {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="margin: 10px; margin-top: 10px; padding: 10px">
+        <h3>Test Page</h3>
+    </div>
+    
+    <!-- <h1> counter </h1> -->
+
+    <!-- <div id="counterApp">
+        <counter></counter>
+    </div>
+
+    <script src="counter.js"></script> -->
+    <script>
+        messageManager.my_object_name = "messageManager";
+        guest.my_object_name = "guest";
+        chatRouter.my_object_name = "chatRouter";
+        var objectlist = {
+            manager: messageManager,
+            chat: chatRouter,
+            thisGuest: guest
+        }
+    </script>
+
+    <div id="object-list-app">
+        <ol>
+          <!--
+            Now we provide each object-item with the object object
+            it's representing, so that its content can be dynamic.
+            We also need to provide each component with a "key",
+            which will be explained later.
+          -->
+          <object-item
+            v-for           = "item in object"
+            v-bind:object   = "item"
+            v-bind:key      = "item.id">
+          </object-item>
+        </ol>
+    </div>
+    
+    <!-- <script src="ObjectListApp.js"></script>
+    <script src="ObjectItem.js"></script> -->
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/ObjectListApp.js"></script>
+    <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/ObjectItem.js"></script>
+    <script>app.mount( '#object-list-app' );</script>   
+
+    <!-- <script src="https://mycustombusinessapp.com/wp-content/plugins/MCBA-Wordpress/mcba_chat_room/js/objectviewer.js"></script> -->
+    <!-- <script src="objectviewer.js"></script> -->
+    
+    <div class="container">
+        <!-- <div class="one">
+      
+    </div>
+
+    <div class="two">
+      
+    </div>
+    <div class="three"></div> -->
+        <div class="four"></div>
+        <div class="five">
+            <div style="padding: 4%; width: 450px;">
+
+                <!-- ///////////////////// MESSAGE MANAGER /////////////////////////// -->
+
+                <div style=" background: #efefef; border-style: solid; border-width: thin; padding: 3%"
+                    class="MessageManager">
+                    <h3 style="color: black; ">Message Manager</h3>
+
+                    <!-- log screen -->
+                    <div class="form-group">
+                        <label>Log</label>
+                        <div class="screen-area" id="message_manager_screen" name="guest_screen" placeholder=""
+                            value=""></div>
+                    </div>
+                    <!-- log screen -->
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Active chat id</label>
+                        <input type="" class="form-control" id="active_chat_id" name="active_chat_id" placeholder=""
+                            value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">MCBA Chat System ID</label>
+                        <input type="text" class="form-control" id="mcba_chat_system_id" name="mcba_chat_system_id"
+                            placeholder="" value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">ip address</label>
+                        <input type="text" class="form-control" id="ip" name="ip" placeholder=""
+                            value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">conversation id</label>
+                        <input type="text" class="form-control" id="conversation_id" name="conversation_id" placeholder=""
+                            value="">
+                    </div>
+
+                    <input type="hidden" id="action" name="action" value="user">
+                    <input type="hidden" id="pushid" name="pushid" value="">
+
+                    <button type="submit" id="start_all_tests" class="btn btn-primary">Start Test</button>
+                    <button id="clear_conversation_table" class="btn btn-primary">Clear Conversations</button>
+                    <button id="clear_messages_table" class="btn btn-primary">Clear Messages</button>
+                    <button id="clear_users_table" class="btn btn-primary">Remove Browser Users</button>
+                </div>
+                <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
+            </div>
+
+        </div>
+        <div class="six">
+            <div style="padding: 4%; width: 300px;">
+                <div style=" background: #efefef; border-style: solid; border-width: thin; padding: 3%">
+                    <h3 style="color: black; ">Message</h3>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Sender Token</label>
+                        <input type="text" class="form-control" id="device" name="device" placeholder="" value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Recipient Token</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder=""
+                            value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Chat ID</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="" value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Message Text</label>
+                        <input type="" class="form-control" id="password" name="password" placeholder="" value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Unique Message Key</label>
+                        <input type="text" class="form-control" id="uid" name="uid" placeholder="" value="">
+                    </div>
+
+                    <input type="hidden" id="action" name="action" value="user">
+                    <input type="hidden" id="pushid" name="pushid"
+                        value="egXzqFj2kiI:APA91bHQQaJBe4lI0XSkk6nbgjVlA_o03Fd498aPY7Z8ginx_pW8KbMjP06cbAG8pNkwu4QfAptGH8XTOBNgGsszlHuGehrrFsw34fATB8oCP6Ebi6ynsyrvvCc5z4C9U5CYjdMfA1Ax">
+
+                    <button type="submit" class="btn btn-primary">Continue</button>
+                </div>
+            </div>
+        </div>
+        <div class="seven">
+            <div style="padding: 4%; width: 300px;">
+                <div style=" background: #efefef; border-style: solid; border-width: thin; padding: 3%" class="guest">
+
+                    <!-- //////////////////////////////// GUEST ////////////////////////////////////////////////// -->
+
+                    <h3 style="color: black; ">Guest</h3>
+
+                    <div class="form-group">
+                        <label>Log</label>
+
+                        <div class="screen-area" id="guest_screen" name="guest_screen" placeholder="" value=""></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Registered User</label>
+                        <input type="text" class="form-control" id="registered_user" name="registered_user"
+                            placeholder="" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Source Machine</label>
+                        <input type="text" class="form-control" id="device" name="device" placeholder="" value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Sender Token</label>
+                        <input type="text" class="form-control" id="senderToken" name="senderToken" placeholder=""
+                            value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Recipient Token</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="" value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Number of Messages</label>
+                        <input type="" class="form-control" id="numberOfMessages" name="numberOfMessages" placeholder=""
+                            value="">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">MCBA ID</label>
+                        <input type="text" class="form-control" id="mcbaid" name="mcbaid" placeholder="" value="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">addMessage( message )</label>
+                        <input type="text" class="form-control" id="addMessage" name="addMessage" placeholder=""
+                            value="">
+                    </div>
+
+                    <input type="hidden" id="action" name="action" value="user">
+                    <input type="hidden" id="pushid" name="pushid"
+                        value="egXzqFj2kiI:APA91bHQQaJBe4lI0XSkk6nbgjVlA_o03Fd498aPY7Z8ginx_pW8KbMjP06cbAG8pNkwu4QfAptGH8XTOBNgGsszlHuGehrrFsw34fATB8oCP6Ebi6ynsyrvvCc5z4C9U5CYjdMfA1Ax">
+
+                    <button id="stopmonitor" type="" class="btn btn-primary">Stop Monitor</button>
+                </div>
+            </div>
+        </div>
+        <div class="eight">
+
+
+
+        </div>
+
+        <div class="nine">
+
+            <div style=" background: #efefef; border-style: solid; border-width: thin; padding: 3%" class="chatrouter">
+                <h3 style="color: black; ">ChatRouter</h3>
+
+                <!-- log screen -->
+                <div class="form-group">
+                    <label>Log</label>
+                    <div class="screen-area" id="chat_screen" name="chat_screen" placeholder="" value=""></div>
+                </div>
+                <!-- log screen -->
+
+                <div class="form-group">
+                    <label>Active Guest ID</label>
+                    <input type="" class="form-control" id="active_guest_id" name="active_guest_id" placeholder=""
+                        value="">
+                </div>
+
+                <div class="form-group">
+                    <label>Number of Conversations</label>
+                    <input type="text" class="form-control" id="number_of_conversations" name="number_of_conversations"
+                        placeholder="" value="">
+                </div>
+
+
+                <div class="form-group">
+                    <label>route( message )</label>
+                    <input type="text" class="form-control" id="route_result" name="route_result" placeholder=""
+                        value="">
+                </div>
+
+
+
+                <input type="hidden" id="action" name="action" value="user">
+                <input type="hidden" id="pushid" name="pushid" value="">
+
+                <button type="submit" class="btn btn-primary">Continue</button>
+            </div>
+
+        </div>
+
+
+        <div class="ten">
+
+        </div>
+
+
+        <div class="eleven">
+
+
+            <div style=" background: #efefef; border-style: solid; border-width: thin; padding: 3%">
+                <h3 style="color: black; ">ChatBox</h3>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">msgScreen</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Unordered List</label>
+                    <input type="text" class="form-control" id="device" name="device" placeholder="" value="">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">update( manager ) </label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">_addMessage( messageText ) </label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">clearScreen()</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="" value="">
+                </div>
+
+
+
+                <input type="hidden" id="action" name="action" value="user">
+                <input type="hidden" id="pushid" name="pushid" value="">
+
+                <button type="submit" class="btn btn-primary">Continue</button>
+            </div>
+
+        </div>
+        <div class="twelve">
+            <div class="inside_container">
+                <div class="one">four</div>
+                <div class="two">two</div>
+                <div class="three">three</div>
+                <div class="four">four</div>
+                <div class="five">four</div>
+                <div class="six">four</div>
+            </div>
+        </div>
+        <div class="thirteen">
+
+            <div style=" background: #efefef; border-style: solid; border-width: thin; padding: 3%">
+                <h3 style="color: black; ">ConversationListManager</h3>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Number of Conversations</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="" value="">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Unordered List</label>
+                    <input type="text" class="form-control" id="device" name="device" placeholder="" value="">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">addGuest( guest, conversationId ) </label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" placeholder="" value="">
+                </div>
+
+
+
+                <input type="hidden" id="action" name="action" value="user">
+                <input type="hidden" id="pushid" name="pushid" value="">
+
+                <button type="submit" class="btn btn-primary">Continue</button>
+            </div>
+
+        </div>
+
+
+        <div class="fourteen"></div>
+        <div class="fifteen">
+            <div class="container">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three3"></div>
+                <div class="six"></div>
+                <div class="seven"></div>
+                <div class="eight"></div>
+                <div class="nine"></div>
+                <div class="five"></div>
+                <div class="four"></div>
+                <div class="three"></div>
+            </div>
+        </div>
+        <div class="sixteen">
+            <div class="container">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three3"></div>
+                <div class="six"></div>
+                <div class="seven"></div>
+                <div class="eight"></div>
+                <div class="nine"></div>
+                <div class="five"></div>
+                <div class="four"></div>
+                <div class="three"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

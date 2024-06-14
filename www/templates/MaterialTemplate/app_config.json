@@ -1,0 +1,225 @@
+var config_data = {
+    "pages": [{
+        "title": "Home",
+        "items": [{
+            "type": "Header"
+        }, {
+            "value": "<h1 style=\"text-align: center;\"><br \/>Welcome to My Custom Business App\u2122<br \/><br \/><\/h1><h3 style=\"text-align: center;\">A drag and drop Wordpress plugin\u00a0that gives you the ability to create your own mobile app!<\/h3>",
+            "type": "Text"
+        }, {
+            "src": "mcba display demo.png",
+            "position": "Center",
+            "percent": "99",
+            "type": "Image"
+        }, {
+            "html": "<p style=\"Margin-left: 15px; Margin-right:15px;\"><b><center><font size=4>Create Your Own Mobile App \n<\/br>With A Simple Drag & Drop Interface<\/font size=4><\/b>\n<\/br>Apps are taking over the world, if you own a smart phone - you are using apps to make your daily life easier, more enjoyable or simply just to kill time.  With My Custom Business App\u2122, we are giving your business a massive advantage over your competition by allowing you to create your own app straight from your wordpress backend.\n<\/br><\/br><b><center><font size=3>Your Best Customer - Is The Customer You Already Have!<\/center><\/font size=4><\/b>\n\nKeep a leg up on your competition by being able to keep your current clients engaged.  Don't become out of sight out of mind with your current clients - send them a notification to remind them of your services.  Notifications sent straight to there phones allow you to send coupons to allow you to draw business almost right away.<\/p>",
+            "type": "Html"
+        }, {
+            "value": "<p>\u00a0<\/p><p style=\"margin-left: 15px; margin-right: 15px;\"><br \/><span style=\"font-size: medium;\"><u><strong>Those are just some of the features. There are Plenty More<\/strong><\/u><\/span><br \/><br \/><strong>\u2022 Easy Drag & Drop Style \/ Skins<\/strong><br \/><strong>\u2022 Powerful Widgets to Create content<\/strong><br \/><strong>\u2022 Send Notifications Straight to Customers Phones<\/strong><br \/><strong>\u2022 Auto Dialer - allows your clients to call you with a simple click<\/strong><br \/><strong>\u2022 Geo Location - Let Your Clients Find You From Anywhere<\/strong><br \/><strong>\u2022 ProxiBlast\u2122! - send a notification when your clients are near your business.<br \/>\u2022 Rewards Program<\/strong><\/p>",
+            "type": "Text"
+        }, {
+            "html": "<br><center><font size=5><u><b>Proxiblast\u2122<\/b><\/u><\/font size=5>",
+            "type": "Html"
+        }, {
+            "src": "proxi.png",
+            "position": "Center",
+            "percent": "100",
+            "type": "Image"
+        }, {
+            "value": "<p>\u00a0<\/p><p style=\"margin-left: 15px; margin-right: 15px;\">Could you benefit from clients knowing about a special of the day? \u00a0With the newest add-on for MCBA, ProxiBlast\u2122 you can do just that! \u00a0Proxi meaning proximity \u2013 basically a surrounding area that you set inside the backend of your wordpress site.<\/p><p>\u00a0<\/p><p>\u00a0<\/p>",
+            "type": "Text"
+        }, {
+            "html": "<center><b><font size=5>Visit <a href=\"http:\/\/www.mycustombusinessapp.com\">MyCustomBusinessApp.com<\/a><\/center><\/b><\/font size=5>",
+            "type": "Html"
+        }, {
+            "html": "<center><b><font size=5>\n<button onclick=\"location.href='\/MCBA\/GeoFence'\">\n     Geofence<\/button><\/b><\/font><\/center>\n\n\n",
+            "type": "Html"
+        }, {
+            "html": "<center><b><font size=5>\n<button onclick=\"location.href='\/MCBA\/Rewards'\">\n     Rewards<\/button><\/b><\/font><\/center>\n\n",
+            "type": "Html"
+        }, {
+            "type": "Footer"
+        }]
+    }, {
+        "title": "Proxiblast",
+        "items": [{
+            "type": "Header"
+        }, {
+            "value": "<h1 style=\"text-align: center;\"><br \/>ProxiBlast\u2122<\/h1>",
+            "type": "Text"
+        }, {
+            "value": "<p>\u00a0<\/p><p style=\"margin-left: 15px; margin-right: 15px;\">Could you benefit from clients knowing about a special of the day? \u00a0With the newest add-on for MCBA, ProxiBlast\u2122 you can do just that! \u00a0Proxi meaning proximity - basically a surrounding area that you set inside the backend of your wordpress site.<br \/><br \/>So if someone\u00a0has downloaded your MCBA on there phone, and\u00a0drives through the given coordinates, they would get your notification.<\/p>",
+            "type": "Text"
+        }, {
+            "src": "proxi.png",
+            "position": "Center",
+            "percent": "100",
+            "type": "Image"
+        }, {
+            "html": "<center><b><font size=5>Visit <a href=\"http:\/\/www.mycustombusinessapp.com\">MyCustomBusinessApp.com<\/a><\/center><\/b><\/font size=5>",
+            "type": "Html"
+        }, {
+            "type": "Footer"
+        }]
+    }, {
+        "title": "Promoblast",
+        "items": [{
+            "type": "Header"
+        }, {
+            "value": "<h1 style=\"text-align: center;\"><br \/>PromoBlast\u2122<\/h1>",
+            "type": "Text"
+        }, {
+            "value": "<div class=\"fusion-separator fusion-full-width-sep sep-none\">\u00a0<\/div><div class=\"fusion-separator fusion-full-width-sep sep-none\"><p style=\"margin-left: 15px; margin-right: 15px;\">My Custom Business App allows you to create and send out a Promo Blast. Which is a single message that will be sent to all of your costumers at the same time. Perfect for promotion, sales, and notifying your costumers about any and all future events!<\/p><\/div><div class=\"fusion-separator fusion-full-width-sep sep-none\">\u00a0<\/div><div class=\"fusion-separator fusion-full-width-sep sep-none\">\u00a0<\/div>",
+            "type": "Text"
+        }, {
+            "src": "promoblast.png",
+            "position": "Center",
+            "percent": "100",
+            "type": "Image"
+        }, {
+            "html": "<center><b><font size=5>Visit <a href=\"http:\/\/www.mycustombusinessapp.com\">MyCustomBusinessApp.com<\/a><\/center><\/b><\/font size=5>",
+            "type": "Html"
+        }, {
+            "type": "Footer"
+        }]
+    }, {
+        "title": "Rewards",
+        "items": [{
+            "type": "Header"
+        }, {
+            "value": "<h1 style=\"text-align: center;\"><br \/>Rewards<\/h1>",
+            "type": "Text"
+        }, {
+            "src": "rewards diagram.png",
+            "position": "Center",
+            "percent": "99",
+            "type": "Image"
+        }, {
+            "value": "<p>\u00a0<\/p><p style=\"margin-left: 15px; margin-right: 15px;\"><br \/>MCBA comes with a built-in Rewards Program, ultimately giving your customers incentive to download your MCBA, visit your business, and most importantly, turn\u00a0your new\u00a0customers into\u00a0returning customers!<br \/><br \/>The Rewards Program is great for business's of all Shapes and Sizes. Whether it's a restaurant that gives a free meal after 5 visits. Or a retail store that wants to give 50% of your next purchase. MCBA is a great, affordable solution\u00a0to achieve this in a organized, easy to use way!<\/p>",
+            "type": "Text"
+        }, {
+            "src": "rewards button.png",
+            "position": "Center",
+            "percent": "30",
+            "type": "Image"
+        }, {
+            "html": "<\/br><center><b><font size=5>Visit <a href=\"http:\/\/www.mycustombusinessapp.com\">MyCustomBusinessApp.com<\/a><\/center><\/b><\/font size=5>",
+            "type": "Html"
+        }, {
+            "type": "Footer"
+        }]
+    }, {
+        "title": "Contact Us",
+        "items": [{
+            "type": "Header"
+        }, {
+            "html": "<\/br><center><font size=4><b>Contact Us\n<\/br><a href=\"tel:+13525563926\"> (352) 556-3926<\/a>\n<\/br>\n<\/br>\nVisit us Online!\n<\/br><a href=\"www.mycustombusiness.com\">www.mycustombusinessapp.com<\/a>\n<\/br><\/br><a href=\"mailto:info@allwebnmobile.com\">info@allwebnmobile.com<\/a>\n<\/br>\n<\/br>\n<\/br>\n<\/br><\/br>\n<\/br><\/br>\n<\/br><\/br>\n<\/br><\/br>\n<\/br><\/br>\n<\/br><\/br>\n<\/br>",
+            "type": "Html"
+        }, {
+            "type": "Footer"
+        }]
+    }],
+    "options": {
+        "logo": {
+            "text": "Logo",
+            "type": "file",
+            "value": "mcba mcba logo.png"
+        },
+        "companyname": {
+            "text": "Company Name",
+            "type": "text",
+            "value": "My custom Business App"
+        },
+        "legalname": {
+            "text": "Legal Company Name",
+            "type": "text",
+            "value": "My custom Business App"
+        },
+        "textcolor": {
+            "text": "Text Color",
+            "type": "color",
+            "value": "#000000"
+        },
+        "facebook": {
+            "text": "Facebook",
+            "type": "text",
+            "value": ""
+        },
+        "linkedin": {
+            "text": "LinkedIn",
+            "type": "text",
+            "value": ""
+        },
+        "twitter": {
+            "text": "Twitter",
+            "type": "text",
+            "value": ""
+        },
+        "email": {
+            "text": "Email",
+            "type": "text",
+            "value": "info@allwebnmobile.com"
+        },
+        "address": {
+            "text": "Street Address",
+            "type": "text",
+            "value": "11213 Spring Hill Dr."
+        },
+        "city": {
+            "text": "City",
+            "type": "text",
+            "value": "Spring Hill"
+        },
+        "state": {
+            "text": "State",
+            "type": "text",
+            "value": "FL"
+        },
+        "zip": {
+            "text": "Zip Code",
+            "type": "text",
+            "value": "34609"
+        },
+        "phone": {
+            "text": "Phone Number",
+            "type": "text",
+            "value": "(352) 556-3926"
+        },
+        "longitude": {
+            "text": "Office Longitude",
+            "type": "text",
+            "value": "-82.537859"
+        },
+        "latitude": {
+            "text": "Office Latitude",
+            "type": "text",
+            "value": "28.462"
+        },
+        "pushgreeting": {
+            "text": "Promoblast Greeting",
+            "type": "text",
+            "value": "Promoblast!"
+        },
+        "base_color": {
+            "text": "Main Color",
+            "type": "color",
+            "value": "#243f90"
+        },
+        "background_color": {
+            "text": "Background Color",
+            "type": "color",
+            "value": "#ffffff"
+        },
+        "page_color": {
+            "text": "Page Color",
+            "type": "color",
+            "value": "#ffffff"
+        },
+        "menu_text": {
+            "text": "Menu Text",
+            "type": "color",
+            "value": "#ffffff"
+        }
+    },
+    "template": "BusinessTemplate"
+};

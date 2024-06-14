@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>blah balh</title>
+    <style>
+        * {
+            --bottom_bubble_padding: 7%;
+            --top_bubble_padding: 7%;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: .4fr 0.2fr 0.5fr 0.2fr .6fr;
+            gap: 0px 0px;
+            border-radius: 60%;
+        }
+
+        .receive_chat_text {
+            z-index: 1;
+            color: black;
+            padding-left: 17%;
+            padding-top: var(--top_bubble_padding);
+            padding-bottom: var(--bottom_bubble_padding);
+            padding-right: 18%;
+            margin-left: 4%;
+            font-size: xx-large;
+        
+        }
+
+        .send_chat_text {
+            z-index: 1;
+            color: black;
+            padding-left: 25%;
+            padding-top: var(--top_bubble_padding);
+            padding-bottom: var(--bottom_bubble_padding);
+            padding-right: 18%;
+            margin-left: 4%;
+            font-size: xx-large;
+        
+        }
+
+        .send_message {
+            grid-area: 1/ 1 / 2 / 2;
+        }
+
+        .call_image {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        .blank_line_1 {
+            grid-area: 2 / 1 / 3 / 3;
+            border:1px solid black;
+        }
+
+        .message {
+            grid-area: 3 / 1 / 4 / 2;
+            height: 65%;
+            width: 80%;
+            margin-left: 40%;
+            background-image: url("receiver_box.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            z-index: -1;
+        }
+
+        .blank_line_2 {
+            grid-area: 4 / 1 / 5 / 3;
+        }
+
+        .call_us_now {
+            grid-area: 5 / 1 / 6 / 2;
+            height: 65%;
+            width: 55%;
+            margin-left: 65%;
+            background-image: url("sender_box.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            z-index: -1;
+        }
+
+        .bottom_row {
+            grid-area: 6 / 1 / 7 / 2;
+        }
+
+        .send_text {
+            font-size: larger;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>upper div</div>
+    <div>
+        <div class="grid-container">
+            <div class="send_a_message"><img src="send_a_message.png"></div>
+            <div class="icon"><img src="call.png"></div>
+
+            <div class="blank-line_1"><h3>blank line 1</h3></div>
+            
+            <div class="message">
+                <div class="receive_chat_text">Receive chat text.  The generic container for flow content.</div>
+            </div>
+            <div class="blank_line_2"><h3>blank line 2</h3></div>
+            <div class="call_us_now"><div class="receive_chat_text">Send chat text.  The generic container for flow content.</div></div>
+            <div class="bottom_row">bottom row</div>
+
+        </div>
+        <div>LOWER DIV</div>
+    </div>
+
+</body>
+
+</html>

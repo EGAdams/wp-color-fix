@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Sign Up Test Page</title>
+    <link rel="stylesheet" href="../../login/css/login.css">
+    <link rel="stylesheet" href=".. /../../mcba_chat_room/css/style.css">
+    <script type="text/javascript" src="https://mycustombusinessapp.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+        id="jquery-core-js"></script>
+    <script src="./ChatBot.js"></script>
+    <script>
+        var validation = new Validation( "chat_sign_up_username", "chat_sign_up_password" );
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid chat_sign_up_area" style="display: grid; background-color: #FCFCFC;" id="chat-box">
+        <!-- //////////////////// start chat area ///////////////////////////////////-->
+        <div class="container-fluid chat-area" style="display: block;">
+            <div class="top_row_grid_area">
+
+                <div class="top-row">
+                    <div class="send_a_message"></div>
+                    <div class="the_call_icon"></div>
+                </div>
+            </div>
+
+            <div class="messages_grid_area">
+
+                <!-- -->
+                <div class="messages_container" id="messagesContainer">
+                    <div class="login_sign_in">
+                        <a id="login_link">Log in</a>
+                        &nbsp or &nbsp
+                        <a id="sign_up_link">Sign up</a>
+                        <div>&nbsp;&nbsp;</div>
+                        <div></div>
+                    </div>
+
+                    <!-- -->
+
+                    <div class="receive_chat_row_container">
+                        <div class="receive_chat_image">
+                            <div class="receive_chat_text">
+                                Welcome to our chat. Is there anything that I can help you with?
+                            </div>
+                        </div>
+                        <div>&nbsp;&nbsp;</div>
+                        <div></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom_row_grid_area">
+
+                <div class="bottom-row">
+                    <div class="input_area" id="messageForm"><input type="text" placeholder="Enter a message"
+                            class="input_text"></div>
+                    <div class="send_airplane"></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- //////////////////// end chat area ///////////////////////////////////-->'
+    </div>
+    <div style="margin-top: 50px"></div>
+    <div>
+        <button onclick="alert( 'is email: ' + validation.isEmail()); 
+                         alert( 'is password: ' + validation.isPassword())"> Test Me
+        </button>
+    </div>
+
+</body>
+
+</html>

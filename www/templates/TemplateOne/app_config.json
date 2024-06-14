@@ -1,0 +1,206 @@
+var config_data = {
+    "pages": [{
+        "title": "Home",
+        "items": [{
+            "undefined": "",
+            "type": "Space"
+        }, {
+            "undefined": "",
+            "type": "Image",
+            "src": "melendez_logo.png",
+            "position": "Center",
+            "percent": "100"
+        }, {
+            "left_button_image": "expert.jpg",
+            "type": "Singlebutton",
+            "lineHeight": "60",
+            "width": "75",
+            "background_color": "408080",
+            "button_text": "Ask an Attorney",
+            "action": "mcba:\/\/chat",
+            "text_color": "ffffff",
+            "left_button_icon": "fas fa-link",
+            "left_button_icon_category": "editors",
+            "font": "cursive",
+            "font_size": "30",
+            "www_url": "https:\/\/mycustombusinessapp.com\/ \/plugins\/MCBA-Wordpress\/..\/..\/uploads\/MCBA\/www\/"
+        }, {
+            "left_button_image": "rewards.jpg",
+            "type": "Singlebutton",
+            "lineHeight": "60",
+            "width": "75",
+            "background_color": "408080",
+            "button_text": "Rewards",
+            "action": "mcba:\/\/rewards",
+            "text_color": "ffffff",
+            "left_button_icon": "fas fa-link",
+            "left_button_icon_category": "editors",
+            "font": "cursive",
+            "font_size": "30",
+            "www_url": "https:\/\/mycustombusinessapp.com\/wp-content\/plugins\/MCBA-Wordpress\/..\/..\/uploads\/MCBA\/www\/"
+        }, {
+            "left_button_image": "navigate.jpg",
+            "type": "Singlebutton",
+            "lineHeight": "60",
+            "width": "75",
+            "button_text": "Navigate to Us",
+            "action": "https:\/\/www.google.com\/maps\/place\/Melendez+Law+Office\/@28.0840555,-82.5092791,17z\/data=!3m1!4b1!4m5!3m4!1s0x88c2c00ccd39423f:0xf893797949ec7a44!8m2!3d28.0840508!4d-82.5070851",
+            "text_color": "ffffff",
+            "left_button_icon": "fas fa-link",
+            "left_button_icon_category": "editors",
+            "font": "cursive",
+            "font_size": "30",
+            "www_url": "https:\/\/mycustombusinessapp.com\/wp-content\/plugins\/MCBA-Wordpress\/..\/..\/uploads\/MCBA\/www\/"
+        }, {
+            "left_button_image": "call.jpg",
+            "type": "Singlebutton",
+            "lineHeight": "60",
+            "width": "75",
+            "button_text": "Call",
+            "action": "tel:+18132800181",
+            "text_color": "ffffff",
+            "left_button_icon": "fas fa-link",
+            "left_button_icon_category": "editors",
+            "font": "cursive",
+            "font_size": "30",
+            "www_url": "https:\/\/mycustombusinessapp.com\/wp-content\/plugins\/MCBA-Wordpress\/..\/..\/uploads\/MCBA\/www\/"
+        }, {
+            "left_button_image": "www.jpg",
+            "type": "Singlebutton",
+            "lineHeight": "60",
+            "width": "75",
+            "button_text": "Website",
+            "action": "https:\/\/melendezlawoffice.com\/",
+            "text_color": "ffffff",
+            "left_button_icon": "fas fa-link",
+            "left_button_icon_category": "editors",
+            "font": "cursive",
+            "font_size": "30",
+            "www_url": "https:\/\/mycustombusinessapp.com\/wp-content\/plugins\/MCBA-Wordpress\/..\/..\/uploads\/MCBA\/www\/"
+        }]
+    }],
+    "options": {
+        "logo": {
+            "text": "Logo",
+            "type": "file",
+            "value": ""
+        },
+        "companyname": {
+            "text": "Company Name",
+            "type": "text",
+            "value": "The Melendez Law Office"
+        },
+        "legalname": {
+            "text": "Legal Company Name",
+            "type": "text",
+            "value": "The Melendez Law Office"
+        },
+        "textcolor": {
+            "text": "Text Color",
+            "type": "color",
+            "value": "#000000"
+        },
+        "website": {
+            "text": "Website",
+            "type": "text",
+            "value": "https:\/\/melendezlawoffice.com\/"
+        },
+        "facebook": {
+            "text": "Facebook",
+            "type": "text",
+            "value": "https:\/\/www.facebook.com\/GeorgeMelendezesq\/"
+        },
+        "linkedin": {
+            "text": "LinkedIn",
+            "type": "text",
+            "value": "https:\/\/www.linkedin.com\/in\/george-melendez-78845219\/"
+        },
+        "twitter": {
+            "text": "Twitter",
+            "type": "text",
+            "value": ""
+        },
+        "email": {
+            "text": "Email",
+            "type": "text",
+            "value": "melendezlawoffice@me.com"
+        },
+        "address": {
+            "text": "Street Address",
+            "type": "text",
+            "value": "3802 Ehrlich Rd. Ste 101"
+        },
+        "city": {
+            "text": "City",
+            "type": "text",
+            "value": "Tampa"
+        },
+        "state": {
+            "text": "State",
+            "type": "text",
+            "value": "FL"
+        },
+        "zip": {
+            "text": "Zip Code",
+            "type": "text",
+            "value": "33624"
+        },
+        "phone": {
+            "text": "Phone Number",
+            "type": "text",
+            "value": "+18132800181"
+        },
+        "longitude": {
+            "text": "Office Longitude",
+            "type": "text",
+            "value": "-82.507170"
+        },
+        "latitude": {
+            "text": "Office Latitude",
+            "type": "text",
+            "value": "28.084290"
+        },
+        "pushgreeting": {
+            "text": "Promoblast Greeting",
+            "type": "text",
+            "value": "Promoblast!"
+        },
+        "google_map_address": {
+            "text": "Google Map Address",
+            "type": "text",
+            "value": "https:\/\/www.google.com\/maps\/place\/Melendez+Law+Office\/@28.0840555,-82.5092791,17z\/data=!3m1!4b1!4m5!3m4!1s0x88c2c00ccd39423f:0xf893797949ec7a44!8m2!3d28.0840508!4d-82.5070851"
+        },
+        "base_color": {
+            "text": "Main Color",
+            "type": "color",
+            "value": "#0000ff"
+        },
+        "background_color": {
+            "text": "Background Color",
+            "type": "color",
+            "value": "#ffffff"
+        },
+        "page_color": {
+            "text": "Page Color",
+            "type": "color",
+            "value": "#ffffff"
+        },
+        "menu_text": {
+            "text": "Menu Text",
+            "type": "color",
+            "value": "#ffffff"
+        },
+        "singlebutton": {
+            "text": "Menu Text",
+            "type": "color",
+            "value": "#ffffff",
+            "width": "75",
+            "lineHeight": "60",
+            "background_color": "#408080",
+            "text_color": "#ffffff",
+            "font": "cursive",
+            "font_size": "30"
+        }
+    },
+    "template": "TemplateOne"
+};

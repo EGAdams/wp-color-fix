@@ -1,0 +1,122 @@
+var template = 
+{
+  
+	"header":{
+		"position" : "before-content",
+		"unique" : true,
+		"has-options" : false,
+		"color" : "#f7f7f7",
+	},
+	
+	"footer":{
+		"position" : "after-content",
+		"unique" : true,
+		"has-options" : false,
+		"color" : "#f7f7f7",
+	},
+	
+	"background":{
+		"unique" : true,
+		"color":"#f7f7f7",
+		"items":[
+			{"name":"image","display":"Filename: ","type":"file"},
+			{"name":"size","display":"Size: ","type":"percentage"},
+			{"name":"repeat","display":"Repeat: ","type":"select","items":[
+					"no-repeat",
+					"repeat-x",
+					"repeat-y",
+					"round",
+					"space",
+				]
+			},
+			{"name":"color","display":"Background Color: ","type":"color"},
+		],
+	},
+	
+	
+	"space":{
+		"color":"#f7f7f7",
+		"items":[
+			{"name":"height","display":"Number of Spaces: ","type":"number","default":1}
+		]
+	},
+
+	"contactform":{
+		"unique" : true,
+    "color":"#f7f7f7",
+		"items":[
+			{"name":"contactform","display":"Contact Form:","type":"text"}
+		]
+	},
+
+	"text":{
+		"color":"#f7f7f7",
+		"items":[
+			{"name":"value","display":"Text: ","type":"text"}
+		],
+	},
+
+	"html":{
+		"color":"#f7f7f7",
+		"items":[
+			{"name":"html","display":"HTML Code: ","type":"html"}
+		],
+	},
+	
+	"list":{
+		"color":"#f7f7f7",
+		"items":[
+			{"name":"values","display":"List: ","type":"array","items":[
+				{"name":"List Item","type":"text"},
+				],
+			},
+			{"name":"bullet_style","display":"Bullet Style: ","type":"select","items":[
+				"check",
+				"dot",
+				],
+			},
+		],
+	},
+	
+	
+	"menu":{
+		"color":"#f7f7f7",
+		"items":[
+			{"name":"values","display":"Menu Items: ","type":"array","items":[
+				{"name":"page","display":"Page: ","type":"page"},
+				],
+			},
+		],
+	},
+
+	
+	"image":{
+		"color":"#f7f7f7",
+		"items":[
+			{"name":"src","display":"Filename: ","type":"file"},
+			{"name":"position","display":"Image Position: ","type":"select","default":"Left","items":[
+				"Left",
+				"Right",
+				"Center",
+				],
+			},
+			{"name":"percent","display":"Width Percentage: ","default":"100","unit":"%","type":"percentage"},
+		],
+	},
+
+	
+	"slider":{
+		"unique" : true,
+		"color":"#f7f7f7",
+		"items":[
+			{"name":"slide interval","display":"Slide Interval: ","type":"number","unit":"Seconds","default":3},
+			{"name":"slides","display":"Slides: ","type":"array","items":[
+				{"name":"Image URL","type":"file"},
+				{"name":"Text","type":"text"},
+				],
+			},
+		],
+	},
+	
+
+};

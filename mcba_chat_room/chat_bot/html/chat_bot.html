@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="../../../mcba_chat_room/css/style.css">
+    <link rel="stylesheet" href="../../../mcba_chat_room/sign_up/css/sign_up.css">
+    <link rel="stylesheet" href="../../../mcba_chat_room/chat_bot/css/chat_bot.css">
+    <script type="text/javascript" src="https://mycustombusinessapp.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+        id="jquery-core-js"></script>
+    <script src="../../../mcba_chat_room/js/ChatColorManager.js"></script>
+    <script src="../js/ChatBot.js"></script>
+</head>
+
+<body>
+
+    <!-- //////////////////// start chat area may 2 ///////////////////////////////////-->
+    <div class="container-fluid chat-area" style="display: block;" id="chat-box"></div>
+    <!-- //////////////////// end chat area ///////////////////////////////////-->
+
+    <script type="text/javascript">
+
+        var chatbot = new ChatBot( "chat-box" );
+        chatbot.draw();
+    </script>
+
+</body>
+
+</html>

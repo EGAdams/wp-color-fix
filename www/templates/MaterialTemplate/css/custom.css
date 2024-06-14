@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+}	
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+    font-size: 12px;
+    font-family: Tahoma, Geneva, sans-serif;
+    line-height: 20px;
+}
+.button {
+  border-radius: 100px;
+}
+.center {
+	text-align: center;
+}
+
+/* Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.navigation {
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.8);
+	position: absolute;
+	z-index: 90;
+	overflow: auto;
+	height: auto;
+	padding-top: 120px;
+	padding-bottom: 12px;
+	background-image: url(../images/textures/black-dots-pattern.png);
+	width: 100%;
+}
+.navigation ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.navigation ul li {
+	color: #fff!important;
+	text-decoration: none;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: #289fcf;
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-bottom: 1px;
+	line-height: normal;
+}
+.navigation ul li a {
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 300!important;
+	color: #fff!important;
+	text-decoration: none;
+}
+.navigation ul li a:link {
+	color: #fff!important;
+	text-decoration: none;
+}
+.navigation ul li a:hover {
+	color: #fff!important;
+	text-decoration: none;
+}
+.navigation ul li a:active {
+	color: #fff!important;
+	text-decoration: none;
+}
+.navigation ul li:hover {
+	color: #fff!important;
+	text-decoration: none;
+	opacity: 0.8;
+	-ms-filter: "alpha(opacity=8)";
+	filter: alpha(opacity=8);
+}
+
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.phones {
+  position: relative;
+}
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
+}
+.phone + .phone {
+  display: none;
+}
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: #11DFC7;
+}
+.value-heading {
+  margin-bottom: .3rem;
+}
+.value-description {
+  opacity: .8;
+  font-weight: 300;
+}
+
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.categories {
+  background-image: url('../images/values-bg.jpg');
+  background-size: cover;
+  color: #fff;
+}
+.categories .section-description { 
+  margin-bottom: 4rem;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .phone {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .phone + .phone {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .phone + .phone {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .phone {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: -14rem;
+    max-height: 570px;
+  }
+}
+
+
+
+#footer {
+	background: rgb(255, 255, 255);
+	background: rgba(255, 255, 255, 0.5);
+	font-weight: normal;
+	color: #000;
+	line-height: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-right: 0px;
+	padding-left: 0px;
+	background-image: url(../images/textures/white-dots-pattern.png);
+	
+}
+#footer .strip {
+	max-width: 768px;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 20px;		
+}
+
+
+
+
+
+
+/*--------------------------------------------------- Data-Theme = a ---------------------------------------------------------------*/
+.ui-bar-a {
+	border: 1px solid #a9cde4;
+	background: #f0f9fd;
+	color: #666;
+}
+.ui-bar-a, .ui-bar-a input, .ui-bar-a select, .ui-bar-a textarea, .ui-bar-a button {
+}
+.ui-bar-a .ui-link-inherit {
+	color: #fff
+}
+.ui-bar-a .ui-link {
+	color: #7cc4e7;
+	font-weight: bold
+}
+.ui-bar-a .ui-link:hover {
+	color: #575757
+}
+.ui-bar-a .ui-link:active {
+	color: #575757
+}
+.ui-bar-a .ui-link:visited {
+	color: #575757
+}
+/*--------------------------------------------------- Page Background ---------------------------------------------------------------*/
+.ui-body-a, .ui-dialog.ui-overlay-a {
+	border: 1px solid #2a2a2a;
+	/*background: #fff;*/
+	color: #6e6e6e;
+	font-weight: normal;
+}
+/*--------------------------------------------------- /Page Background ---------------------------------------------------------------*/
+.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-body-a button {
+}
+.ui-body-a .ui-link-inherit {
+	color: #fff;
+}
+.ui-body-a .ui-link {
+	color: #575757;
+	font-weight: bold
+}
+.ui-body-a .ui-link:hover {
+	color: #575757
+}
+.ui-body-a .ui-link:active {
+	color: #575757
+}
+.ui-body-a .ui-link:visited {
+	color: #575757
+}
+/*--------------------------------------------------- /Data-Theme = a ---------------------------------------------------------------*/
+/*--------------------------------------------------- /Home Page Buttons ---------------------------------------------------------------*/
+.ui-btn-up-a {
+	border: 1px solid #55585c;
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none!important;
+	background-color: #2b2e33;/*background-image:url(../images/bg-buttons.png);*/
+}
+.ui-btn-up-a h3 {
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none!important;
+	font-weight: normal!important;
+}
+.ui-btn-up-a a.ui-link-inherit {
+	color: #fff;
+}
+.ui-btn-hover-a {
+	border: 1px solid #55585c;
+	background: #55585c;
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none!important;
+}
+.ui-btn-hover-a h3 {
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none!important;
+	font-weight: normal!important;
+}
+.ui-btn-hover-a a.ui-link-inherit {
+	color: #fff
+}
+.ui-btn-down-a {
+	border: 1px solid #55585c;
+	background: #55585c;
+	font-weight: bold;
+	color: #fff;
+	font-size: 14px;
+	text-decoration: none!important;
+}
+.ui-btn-down-a a.ui-link-inherit {
+	color: #fff
+}
+.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-down-a {;
+	text-decoration: none!important;
+}
+/*--------------------------------------------------- /Home Page Buttons ---------------------------------------------------------------*/
+/*--------------------------------------------------- Header Inner Pages ---------------------------------------------------------------*/
+.ui-header {
+	background: #333;
+}
+/*--------------------------------------------------- /Header Inner Pages ---------------------------------------------------------------*/
+
+
+
+.widget .widget-top {
+    background: #fafafa;
+    color: #23282d;
+}
+
+
+
+/* PREVIEW */
+.mcba_highlight_block {
+	background-color: #0000ff;
+	opacity: 0.4;
+}
+
+
+
+.mcba_template_page_title {
+	color:#ffffff;
+	font-size:20px;
+	float: left;
+	margin-top: 7px;
+}

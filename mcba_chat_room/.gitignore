@@ -1,0 +1,5 @@
+.htaccess
+www/templates/SimpleTemplate/template.json
+www/templates/MaterialTemplate/app_config_www1512.json
+error_log
+register.log

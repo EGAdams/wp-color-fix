@@ -1,0 +1,22 @@
+{
+  "name": "mcba-wordpress",
+  "version": "1.0.0",
+  "description": "=== My Custom Business App ===\r Contributors: awm00101dev3\r Donate link: https://mycustombusinessapp.com/\r Tags: comments, spam\r Requires at least: 4.7\r Tested up to: 5.5.3\r Stable tag: 4.3\r Requires PHP: 7.0\r License: GPLv2 or later\r License URI: https://www.gnu.org/licenses/gpl-2.0.html",
+  "main": "counter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EGAdams/MCBA-Wordpress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EGAdams/MCBA-Wordpress/issues"
+  },
+  "homepage": "https://github.com/EGAdams/MCBA-Wordpress#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

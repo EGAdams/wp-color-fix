@@ -1,0 +1,23 @@
+<div style="padding: 6%; width: 550px;">
+    <div style=" background: #efefef; border-style: solid; border-width: thin; padding: 3%">
+        <h3 style="color: black; ">{{ object.my_object_name }}</h3>
+        <ul style="list-style-type: none;">
+            <li v-for="property, index in object">
+                <div v-if="typeof property != 'object' && index != 'my_object_name'">     
+                    <div class="form-group" style="margin: 7px;">
+                        <label></label>
+                            <input
+                            style="width: 260px;" 
+                            v-html='' type="" v-bind:value="index + ': ' + property" class="" id="" name=""></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="">
+            <label>Log</label>
+                <div  v-html='rawHtml' class="screen-area" id="message_manager_screen" 
+                     name="guest_screen" placeholder="">{{ object.terminal_text }}
+                </div>
+        </div>
+    </div>
+</div>

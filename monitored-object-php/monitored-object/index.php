@@ -1,0 +1,1 @@
+<?php echo "hello!  inside monitored object directory. <br>"; ?>

@@ -1,0 +1,154 @@
+var template = {
+	"header": {
+		"position": "before-content",
+		"unique": true,
+		"has-options": true,
+		"color": "#d519cf",
+		"items": [{
+			"name": "src",
+			"display": "Filename: ",
+			"type": "file"
+		}]
+	},
+	"background": {
+		"unique": true,
+		"color": "#226666",
+		"items": [{
+				"name": "color",
+				"display": "Background Color: ",
+				"type": "color"
+			},
+			{
+				"name": "image",
+				"display": "Filename: ",
+				"type": "file"
+			},
+			{
+				"name": "size",
+				"display": "Size: ",
+				"type": "number"
+			},
+			{
+				"name": "repeat",
+				"display": "Background Repeat: ",
+				"type": "select",
+				"items": [
+					"no-repeat",
+					"repeat-x",
+					"repeat-y",
+					"round",
+					"space"
+				]
+			}
+		]
+	},
+	"space": {
+		"color": "#FFFAFA",
+		"items": [{
+			"name": "height",
+			"display": "Number of Spaces: ",
+			"type": "number",
+			"default": 1
+		}]
+	},
+	"text": {
+		"color": "#7686AA",
+		"items": [{
+			"name": "value",
+			"display": "Text: ",
+			"type": "text"
+		}]
+	},
+	"html": {
+		"color": "#7686AA",
+		"items": [{
+			"name": "html",
+			"display": "HTML: ",
+			"type": "text"
+		}]
+	},
+	"list": {
+		"color": "#85CC85",
+		"items": [{
+				"name": "values",
+				"display": "List Items: ",
+				"type": "array",
+				"items": [{
+					"name": "value",
+					"type": "text"
+				}]
+			},
+			{
+				"name": "bullet_style",
+				"display": "Bullet Style: ",
+				"type": "select",
+				"items": [
+					"check",
+					"dot"
+				]
+			}
+		]
+	},
+	"menu": {
+		"color": "#649999",
+		"items": [{
+			"name": "values",
+			"display": "Menu Items: ",
+			"type": "array",
+			"items": [{
+				"name": "page",
+				"type": "page"
+			}]
+		}]
+	},
+	"image": {
+		"color": "#123456",
+		"items": [{
+				"name": "src",
+				"display": "Filename: ",
+				"type": "file"
+			},
+			{
+				"name": "position",
+				"display": "Image Position: ",
+				"type": "select",
+				"default": "Left",
+				"items": [
+					"Left",
+					"Right",
+					"Center",
+					"Span"
+				]
+			}
+		]
+	},
+	"slider": {
+		"unique": true,
+		"color": "#03a8e2",
+		"items": [{
+				"name": "slide interval",
+				"display": "Slide Interval: ",
+				"type": "number",
+				"unit": "Seconds",
+				"default": 3
+			},
+			{
+				"name": "slides",
+				"display": "Slides: ",
+				"type": "array",
+				"items": [{
+						"name": "image file",
+						"display": "Image File:",
+						"type": "file"
+					},
+					{
+						"name": "text",
+						"display": "Slide Title:",
+						"type": "text"
+					}
+
+				]
+			}
+		]
+	}
+};

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Caht Cfae</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+      ul {
+        list-style-type: none;
+      }
+
+      .conversation_list li {
+        border: 1px solid black;
+        padding: 7px;
+        
+      }
+
+      .conversation_list {
+        width: 20%;
+      }
+
+      .conversation_list li:hover {
+        background-color: whitesmoke;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    
+    <script src="./js/ConversationListManager.js"></script>
+
+    <link href="css/style.css" rel="stylesheet">
+
+    
+</head>
+<body>
+    <div class="conversation_list" id="app"></div>
+
+</body>
+
+<script>
+  var listManager = new ConversationListManager();
+  $( '#app' ).html( listManager.buildList());
+
+</script>
+
+
+</html>

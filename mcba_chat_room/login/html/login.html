@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Sign Up Test Page</title>
+    <link rel="stylesheet" href="../../login/css/login.css">
+    <link rel="stylesheet" href="../../../mcba_chat_room/validation/css/validation_test_stye.css">
+    <script type="text/javascript" src="https://mycustombusinessapp.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+        id="jquery-core-js"></script>
+    <script src="../../validation/js/Validation.js"></script>
+    <script>
+        var validation = new Validation( "chat_sign_up_username", "chat_sign_up_password" );
+    </script>
+</head>
+
+<body>
+
+    <div class="container-fluid chat_sign_up_area" style="display: grid; background-color: #FCFCFC;" id="chat-box">
+        <div class="sign_up_login_container">
+            <div class="chat_sign_up_header">Login</div>
+        </div>
+        <div class="chat_sign_up_username" id="chat_sign_up_username"> <input type="text" placeholder="E-mail Address"
+                class="input_text"></div>
+        <div class="chat_sign_up_password" id="chat_sign_up_password"> <input type="text" placeholder="Password"
+                class="input_text"></div>
+
+        <div class="chat_sign_up_button">
+            <a class="mcba_button">Login</a>
+        </div>
+
+        <div class="chat_sign_up_footer">
+            <a href="">Forgot Password?</a>
+        </div>
+    </div>
+    <div style="margin-top: 50px"></div>
+    <div>
+        <button onclick="alert( 'is email: ' + validation.isEmail()); 
+                         alert( 'is password: ' + validation.isPassword())"> Test Me
+        </button>
+    </div>
+
+</body>
+
+</html>

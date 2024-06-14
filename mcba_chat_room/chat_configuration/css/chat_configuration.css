@@ -1,0 +1,108 @@
+/*
+* Chat Configuration Container */
+.chat-configuration-container { 
+  background-color: whitesmoke; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, minmax(10%, 20%)); /* Each row can be between 10% and 20% of the total container height */
+  gap: 10px; /* Visual separation */
+  justify-content: stretch;
+  align-content: stretch;
+  justify-items: stretch;
+  align-items: stretch;
+  width: 27%;
+  margin-top: 30px;
+  margin-bottom: 5%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+
+.chat-color-configuration-title-row {
+  grid-area: 1 / 1 / 2 / 3; /* Title across both columns in the first row */
+  justify-self: center;
+  align-self: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  width: 100%;
+  color: #000000;
+}
+
+.system-enabled-configuration-row-label {
+  grid-area: 2 / 1 / 3 / 3; /* System Enabled label and switch spanning both columns */
+  justify-self: center;
+  align-self: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  color: #000000;
+}
+
+.chat-color-configuration-row-label {
+  grid-area: 3 / 1 / 4 / 2; /* Main Chat Color label moved to the third row */
+  justify-self: center;
+  align-self: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  color: #000000;
+}
+
+.phone-icon-color-configuration-row-label {
+  grid-area: 4 / 1 / 5 / 2; /* Phone Icon Color label moved to the fourth row */
+  justify-self: center;
+  align-self: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  color: #000000;
+}
+
+.chatbox-phone-number-label {
+  grid-area: 5 / 1 / 6 / 2; /* Phone number label in the fifth row */
+  justify-self: center;
+  align-self: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  color: #000000;
+}
+
+.chat-color-configuration-color-picker {
+  grid-area: 3 / 2 / 4 / 3; /* Main Chat Color picker moved to the third row */
+}
+
+.phone-icon-color-picker { 
+  grid-area: 4 / 2 / 5 / 3; /* Phone Icon Color picker moved to the fourth row */
+}
+
+.on-off-switch { /* On-off switch alignment */
+  grid-area: 2 / 2 / 3 / 3; /* System Enabled switch in the second row */
+  justify-self: center;
+  align-self: center;
+}
+
+.chatbox-phone-number { 
+  grid-area: 5 / 2 / 6 / 3; /* Phone number in the fifth row */
+  justify-self: center;
+  align-self: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  width: 100%;
+  color: #000000;
+}
+
+#chat-color-configuration-color-picker,
+#phone-icon-color-picker {
+  width: 60%;
+  margin-top: 5%;
+}
+
+.chat-color-configuration-color-picker,
+.phone-icon-color-picker {
+  padding-top: 10%;
+  justify-self: center;
+  align-self: flex-end;
+  height: 90%;
+  width: 90%;
+}

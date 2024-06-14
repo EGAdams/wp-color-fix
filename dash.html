@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <script type="module" crossorigin src="assets/index.da28a943.js"></script>
+    <link rel="stylesheet" href="assets/index.5794c1b2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./mcba_chat_room/js/DataSource.js"></script>
+    <link rel="stylesheet" href="./grid_style.css">
+    <style>
+        #clearmessages {
+            margin: 2%;
+        }
+        #clearguests {
+            margin: 2%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left"></div>
+        <div class="right"></div>
+
+        <div class="clear_messages_button"><div><button id="clearmessages">Clear Messages</button></div></div>
+        <div class="clear_messages_status">message status</div>
+
+        <div class="clear_guests_button">  <div><button id="clearguests">  Clear Guests  </button></div></div>
+        <div class="clear_guests_status">guest status</div>
+        
+        <div class="clear_log_button">  <div><button id="log">  Clear Guests  </button></div></div>
+        <div class="first_log"><div id="log_app"></div></div>
+
+    </div>
+</body>
+
+<script>
+
+    let dataSource = new DataSource();
+    $( "#clearmessages" ).click( function () {
+        var nextFunction = "";
+        jQuery( document ).one( nextFunction, this[ nextFunction ] );
+        var args = {
+            query: "delete from wp_mcba_chat_messages",
+            trigger: nextFunction,
+            thisObject: this
+        }
+        dataSource.runQuery_dev( args );
+        $( ".clear_messages_status" ).html( "Messages Cleared " + Date());
+    } );
+
+    $( "#clearguests" ).click( function () {
+        var nextFunction = "";
+        jQuery( document ).one( nextFunction, this[ nextFunction ] );
+        var args = {
+            query: "delete from wp_mcba_users where first_name='Guest'",
+            trigger: nextFunction,
+            thisObject: this
+        }
+        dataSource.runQuery_dev( args );
+        $( ".clear_guests_status" ).html( "Guests Cleared " + Date().replace(/Eastern/g, ""));
+    });
+
+
+</script>
+
+</html>

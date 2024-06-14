@@ -1,0 +1,31 @@
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr .1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    align-content: stretch;
+    align-items: stretch;
+    width: 90%;
+    height: 90%;
+  }
+  
+  .left { grid-area: 1 / 1 / 2 / 2; }
+  
+  .right { grid-area: 1 / 2 / 2 / 3; }
+  
+  .clear_messages_button { grid-area: 1 / 1 / 2 / 2; }
+  
+  .clear_messages_status { grid-area: 1 / 2 / 2 / 3; }
+  
+  .clear_guests_button { grid-area: 2 / 1 / 3 / 2; }
+  
+  .clear_guests_status { grid-area: 2 / 2 / 3 / 3; }
+  
+  .clear_log_button { grid-area: 3 / 1 / 4 / 2; }
+  
+  .first_log { grid-area: 3 / 2 / 4 / 3; }
+  

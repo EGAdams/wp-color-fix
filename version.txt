@@ -1,0 +1,12 @@
+
+
+2.4.20026 - conformed to latest WordPress guidelines in January of 2021.
+
+2.4.20025 - fixed extra function definition in DatabaseRegister.php
+
+2.4.20024
+
+
+
+
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>object List App</title>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+</head>
+
+<body>
+    <div id="object-list-app">
+        <ol>
+          <!--
+            Now we provide each object-item with the object object
+            it's representing, so that its content can be dynamic.
+            We also need to provide each component with a "key",
+            which will be explained later.
+          -->
+          <object-item
+            v-for       = "item in object"
+            v-bind:object = "item"
+            v-bind:key  = "item.id">
+          </object-item>
+        </ol>
+    </div>
+    
+    <script>
+        var object_from_before = { id: 100, message: "hi", my_object_name: "other_object_from_before" };
+        var other_object_from_before = { id: 100, message: "hi im the other object from before", my_object_name: "other_object_from_before" };
+        var reactive_list = [ "object_from_before", "other_object_from_before" ];    
+        var objectlist = {
+            managerview: {
+                id: 21,
+                message: "hello.  im 21.",
+                my_object_name: "managerview"
+            },
+            otherview: other_object_from_before,
+            manager: object_from_before
+        }
+    </script>
+    <script src="../ObjectListApp.js"></script>
+    <script src="../ObjectItem.js"></script>
+    <script>app.mount( '#object-list-app' );</script>
+</body>
+</html>

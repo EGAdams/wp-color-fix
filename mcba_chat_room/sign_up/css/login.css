@@ -1,0 +1,107 @@
+
+
+.chat_login_input_text {
+    z-index: 1;
+    color: #C5C3C5;
+    padding-left: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 18%;
+    width: 62%;
+    font-size: 15px;
+    font-weight: lighter;
+    border: none;
+    border-bottom: 2px solid #C5C3C5;
+    background-color: white;
+}
+
+.sign_up_login_container {
+    align-self:flex-end;
+    padding-left: 3%;
+    
+}
+
+.chat_sign_up_password {
+    text-align: center;
+    background-color: white;
+    margin-bottom: -10%
+}
+
+.chat_login_password {
+    text-align: center;
+    background-color: white;
+    margin-bottom: -6%
+}
+
+.chat_sign_up_confirm_password {
+    text-align: center;
+    background-color: white;
+}
+
+.chat_sign_up_footer a {
+    text-decoration: none;
+    color: gray;
+    padding: 15px
+}
+
+
+.chat_sign_up_header_login {
+    color: #cacaca;
+    font-size: 17px;
+}
+
+.chat_sign_up_username {
+    padding-top: 14%;
+    text-align: center;
+    background-color: white;
+    margin-bottom: -7%;
+}
+
+.chat_sign_up_button {
+    text-align: center;
+    color:black;
+    background-color: white;
+    margin-bottom: -9%
+}
+
+.chat_sign_up_button a {
+    color: white;
+    background-color: #546CFA;
+    text-align: center;
+}
+
+.chat_sign_up_cancel_button {
+    width: 80%;
+    margin: 10%;
+    text-align: center;
+}
+
+.chat_sign_up_footer {
+    text-align: center;
+    background-color: white;
+    margin-top: 0px;
+    
+}
+
+.chat_sign_up_header {
+    margin: 1%;
+    text-align: left;
+    margin: 10px;
+    color: white;
+    font-size: 27px;
+}
+
+.chat_sign_up_area {
+    background: #ffffff;
+    border: solid 0.1px;
+    border-radius: 3%;
+    height: 53%;
+    overflow: auto;
+    position: fixed;
+    bottom: 5%;
+    right: 25px;
+    z-index: 10;
+    width: 25%;
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+    font-family: sans-serif;
+}

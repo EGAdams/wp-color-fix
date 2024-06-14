@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Sign Up Test Page</title>
+    <link rel="stylesheet" href="../../sign_up/css/sign_up.css">
+    <link rel="stylesheet" href="../../../mcba_chat_room/validation/css/validation_test_stye.css">
+    <script type="text/javascript" src="https://mycustombusinessapp.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+        id="jquery-core-js"></script>
+    <script src="../js/Validation.js"></script>
+    <script>
+        var validation = new Validation()
+    </script>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+            background-color: #FCFCFC;
+            border-style: solid;
+        }
+
+        .flex-container>div {
+            width: 30%;
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .flex_sign_up_header {
+            width: 100px;
+        }
+
+        .chat_sign_up_username {
+            background-color: #ffffff;
+        }
+
+        .chat_sign_up_footer {
+            background-color: #ffffff;
+            margin: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="flex-container">
+        <div class="container">
+            <div class="flex-container">
+                <div class="flex_sign_up_header">Sign Up</div>
+                <div class="chat_sign_up_header">Login</div>
+            </div>
+            <div class="chat_sign_up_username" id="chat_sign_up_username"> <input type="text"
+                    placeholder="E-mail Address" class="input_text"> </div>
+            <div class="chat_sign_up_password" id="chat_sign_up_password"> <input type="text" placeholder="Password"
+                    class="input_text"> </div>
+            <div class="chat_sign_up_button">
+
+                <a class="mcba_button">Login</a>
+
+            </div>
+
+            <div class="chat_sign_up_footer">
+                <a href="">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="alert( 'is email: ' + validation.isEmail()); 
+                         alert( 'is password: ' + validation.isPassword())"> Test Me
+        </button>
+    </div>
+
+</body>
+
+</html>

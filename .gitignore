@@ -1,0 +1,15 @@
+.htaccess
+www/templates/SimpleTemplate/template.json
+www/templates/MaterialTemplate/app_config_www1512.json
+error_log
+register.log
+.vscode/launch.json
+register.log
+node_modules/
+assets/index.da28a943.js
+assets/index.5794c1b2.css
+
+curlTest.php
+inc/phpqrcode/cache/*
+mcba_class.md
+a_sandbox/action_selected.md
